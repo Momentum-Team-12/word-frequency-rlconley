@@ -7,7 +7,18 @@ STOP_WORDS = [
 
 def print_word_freq(file):
     """Read in `file` and print out the frequency of words in that file."""
-    pass
+    with open(file, 'r') as f:
+        # code to read and process the file goes here, where the file is referred to as f.
+        # when the indented code block stops, Python will close the file, and f will no longer be defined
+        # read() converts the file to a string
+        file_string = f.read()
+        # splitlines() will return a list with each element being a line in the file
+        file_list = file_string.splitlines()
+        # strip() and split() can also be helpful in this process.
+
+# this will print out one line at a time
+    for line in file_list:   
+        print(line)
 
 
 if __name__ == "__main__":
